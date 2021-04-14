@@ -1,0 +1,14 @@
+For VAN, YStart and YEnd are in physical pixels. Physical line spacing depends on pixel spacing.
+For TAN, the angle is in the plane of the screen and AngEnd does not depend on pixel spacing.
+pix_per_inch:207,pix_per_cm:81.5
+TrialNum  Mode  Color  YStart  AngStart  YEnd  AngEnd
+ 1 VAN-Sitting BLUE    -6.5   -0.80   -23.0   -3.00
+ 2 VAN-Sitting BLUE    38.3    4.90    -4.2   -0.50
+ 3 VAN-Sitting BLUE    31.3    4.00     6.6    0.80
+ 4 VAN-Sitting BLUE   -62.0   -8.00    -6.2   -0.80
+ 5 VAN-Sitting BLUE   -47.2   -6.10    -4.9   -0.60
+ 6 VAN-Sitting BLUE   -77.4  -10.00   -10.9   -1.40
+ 7 VAN-Sitting BLUE   -72.2   -9.30    -1.9   -0.20
+ 8 VAN-Sitting BLUE   -14.1   -1.80    -9.8   -1.30
+ 9 VAN-Sitting BLUE   -48.7   -6.30    -4.7   -0.60
+10 VAN-Sitting BLUE   -39.7   -5.10   -11.2   -1.40
