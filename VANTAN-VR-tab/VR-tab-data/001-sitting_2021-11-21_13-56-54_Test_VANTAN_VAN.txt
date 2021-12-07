@@ -1,0 +1,29 @@
+File Version: VER3
+Date/Time: 2021-11-21_13-56-54
+Location: SpX
+Arm: Arm_1
+Subject ID: 001-sitting
+Visit: Test
+Vision Correction: Glasses
+Screen Distance: 50.0
+Screen Pixels Per Inch: 218
+Screen Pixels Per cm: 85.83
+Test Name: VANTAN
+Test Mode: VAN
+
+# For VAN, YStart and YEnd are in physical pixels. Physical line spacing depends on pixel spacing.
+# For TAN, the angle is in the plane of the screen and AngEnd does not depend on pixel spacing.
+
+Trials:
+TrialNum  Mode  Color  YStart  AngStart  YEnd  AngEnd
+ 1 VAN BLUE    99.7    7.20    -1.6   -0.10
+ 2 VAN BLUE  -108.7   -7.90     1.0    0.10
+ 3 VAN BLUE    23.9    1.70     3.7    0.30
+ 4 VAN BLUE  -118.8   -8.60     6.2    0.40
+ 5 VAN BLUE   121.1    8.80     4.6    0.30
+ 6 VAN BLUE    87.6    6.40    -0.7    0.00
+ 7 VAN BLUE  -120.4   -8.80     2.1    0.20
+ 8 VAN BLUE   -51.3   -3.70    -0.8   -0.10
+ 9 VAN BLUE   121.5    8.80    -1.0   -0.10
+10 VAN BLUE   -66.9   -4.90    -0.1    0.00
+11 VAN BLUE   -39.1   -2.80     3.4    0.20

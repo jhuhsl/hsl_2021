@@ -1,0 +1,29 @@
+File Version: VER3
+Date/Time: 2021-11-21_14-02-20
+Location: SpX
+Arm: Arm_1
+Subject ID: 001-standing
+Visit: Test
+Vision Correction: Glasses
+Screen Distance: 50.0
+Screen Pixels Per Inch: 218
+Screen Pixels Per cm: 85.83
+Test Name: VANTAN
+Test Mode: TAN
+
+# For VAN, YStart and YEnd are in physical pixels. Physical line spacing depends on pixel spacing.
+# For TAN, the angle is in the plane of the screen and AngEnd does not depend on pixel spacing.
+
+Trials:
+TrialNum  Mode  Color  YStart  AngStart  YEnd  AngEnd
+ 1 TAN BLUE    30.3    2.20     8.1    0.60
+ 2 TAN BLUE    62.3    4.50    19.3    1.40
+ 3 TAN BLUE  -104.7   -7.60     5.1    0.40
+ 4 TAN BLUE  -111.8   -8.10     6.4    0.50
+ 5 TAN BLUE   -72.1   -5.20    13.4    1.00
+ 6 TAN BLUE    65.5    4.80    15.5    1.10
+ 7 TAN BLUE   133.6    9.70    40.1    2.90
+ 8 TAN BLUE    44.1    3.20    16.9    1.20
+ 9 TAN BLUE   -15.9   -1.20     5.6    0.40
+10 TAN BLUE    86.8    6.30    14.3    1.00
+11 TAN BLUE   -80.6   -5.90    15.7    1.10
