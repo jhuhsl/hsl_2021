@@ -97,9 +97,7 @@ S002.45.VR <- S002.45.VR[c(1:15,21:35),]
 S003.45.VR <- S003.45.VR[c(1:15,21:35),]
 S004.45.VR <- S004.45.VR[c(1:15,21:35),]
 S005.45.VR <- S005.45.VR[c(1:15,21:35),]
-
-
-
+#FOR LOOP GOES HERE @ SERENA 
 
 #making dataframes of the mean VANTAN scores by condition
 ss.list<- c('S001','S002','S003','S004','S005')
