@@ -1,20 +1,3 @@
-File Version: VER3
-Date/Time: 2021-11-21_14-58-05
-Location: SpX
-Arm: Arm_1
-Subject ID: 003-45-oculus
-Visit: Test
-Vision Correction: None
-Screen Distance: 50.0
-Screen Pixels Per Inch: 218
-Screen Pixels Per cm: 85.83
-Test Name: VANTAN
-Test Mode: VAN
-
-# For VAN, YStart and YEnd are in physical pixels. Physical line spacing depends on pixel spacing.
-# For TAN, the angle is in the plane of the screen and AngEnd does not depend on pixel spacing.
-
-Trials:
 TrialNum  Mode  Color  YStart  AngStart  YEnd  AngEnd
  1 VAN BLUE    84.3    6.10    64.5    4.70
  2 VAN BLUE    -1.2   -0.10    60.8    4.40
