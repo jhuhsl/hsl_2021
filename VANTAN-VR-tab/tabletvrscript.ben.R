@@ -101,25 +101,25 @@ S001.sit.VAN.tablet$VAN <- 180/pi*atan((S001.sit.VAN.tablet$YEnd/218)/Subject_ar
 S001.stand.VAN.tablet$VAN <- 180/pi*atan((S001.stand.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
 S001.supine.VAN.tablet$VAN <- 180/pi*atan((S001.supine.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
 #S002
-S002.45.VAN.tablet$VAN <- 180/pi*atan((S002.45.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
-S002.sit.VAN.tablet$VAN <- 180/pi*atan((S002.sit.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
-S002.stand.VAN.tablet$VAN <- 180/pi*atan((S002.stand.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
-S002.supine.VAN.tablet$VAN <- 180/pi*atan((S002.supine.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
+S002.45.VAN.tablet$VAN <- 180/pi*atan((S002.45.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[2])
+S002.sit.VAN.tablet$VAN <- 180/pi*atan((S002.sit.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[2])
+S002.stand.VAN.tablet$VAN <- 180/pi*atan((S002.stand.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[2])
+S002.supine.VAN.tablet$VAN <- 180/pi*atan((S002.supine.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[2])
 #S003
-S003.45.VAN.tablet$VAN <- 180/pi*atan((S003.45.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
-S003.sit.VAN.tablet$VAN <- 180/pi*atan((S003.sit.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
-S003.stand.VAN.tablet$VAN <- 180/pi*atan((S003.stand.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
-S003.supine.VAN.tablet$VAN <- 180/pi*atan((S003.supine.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
+S003.45.VAN.tablet$VAN <- 180/pi*atan((S003.45.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[3])
+S003.sit.VAN.tablet$VAN <- 180/pi*atan((S003.sit.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[3])
+S003.stand.VAN.tablet$VAN <- 180/pi*atan((S003.stand.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[3])
+S003.supine.VAN.tablet$VAN <- 180/pi*atan((S003.supine.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[3])
 #S004
-S004.45.VAN.tablet$VAN <- 180/pi*atan((S004.45.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
-S004.sit.VAN.tablet$VAN <- 180/pi*atan((S004.sit.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
-S004.stand.VAN.tablet$VAN <- 180/pi*atan((S004.stand.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
-S004.supine.VAN.tablet$VAN <- 180/pi*atan((S004.supine.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
+S004.45.VAN.tablet$VAN <- 180/pi*atan((S004.45.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[4])
+S004.sit.VAN.tablet$VAN <- 180/pi*atan((S004.sit.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[4])
+S004.stand.VAN.tablet$VAN <- 180/pi*atan((S004.stand.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[4])
+S004.supine.VAN.tablet$VAN <- 180/pi*atan((S004.supine.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[4])
 #S005
-S005.45.VAN.tablet$VAN <- 180/pi*atan((S005.45.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
-S005.sit.VAN.tablet$VAN <- 180/pi*atan((S005.sit.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
-S005.stand.VAN.tablet$VAN <- 180/pi*atan((S005.stand.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
-S005.supine.VAN.tablet$VAN <- 180/pi*atan((S005.supine.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[1])
+S005.45.VAN.tablet$VAN <- 180/pi*atan((S005.45.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[5])
+S005.sit.VAN.tablet$VAN <- 180/pi*atan((S005.sit.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[5])
+S005.stand.VAN.tablet$VAN <- 180/pi*atan((S005.stand.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[5])
+S005.supine.VAN.tablet$VAN <- 180/pi*atan((S005.supine.VAN.tablet$YEnd/218)/Subject_arm_length$`Arm Length`[5])
 
 #S001.VR.Array <- array(c(S001.sit.VR, S001.stand.VR, S001.45.VR, S001.supine.VR))
 #list<-list(S001.sit.VR, S001.stand.VR, S001.45.VR, S001.supine.VR)
@@ -152,6 +152,14 @@ S002.supine.VR <- S002.supine.VR[c(1:15,36:50),]
 S003.supine.VR <- S003.supine.VR[c(1:15,21:35),]
 S004.supine.VR <- S004.supine.VR[c(1:15,21:35),]
 S005.supine.VR <- S005.supine.VR[c(1:15,21:35),]
+
+#Specific Corrections
+#Subject 005 reported skipping trials 1-3 TAN VR Standing 
+S005.stand.VR <- S005.stand.VR[-c(16:18),]
+#Subject 003 reported skipping trial 1 TAN VR Sitting
+S003.sit.VR <- S003.sit.VR[-c(16),]
+#Subject 004 reported skipping trials 12-15 in VR VAN and TAN supine  
+S004.supine.VR <- S004.supine.VR[-c(12:15,27:30),]
 
 #making dataframes of the mean VANTAN scores by condition
 ss.list<- c('S001','S002','S003','S004','S005')
@@ -194,9 +202,8 @@ Avg.supine.TAN.vr <- data.frame(ss.list, Avg.supine.TAN.vr.list)
 colnames(Avg.supine.TAN.vr) <- c('Subject','TAN')
 
 #VAN Conditions
-#VAN Conditions
 #Tablet, VAN, 45
-Avg.45.VAN.tablet.list <- c(mean(S001.45.VAN.tablet$AngEnd), mean(S002.45.VAN.tablet$AngEnd),mean(S003.45.VAN.tablet$AngEnd),mean(S004.45.VAN.tablet$AngEnd),mean(S005.45.VAN.tablet$AngEnd))
+Avg.45.VAN.tablet.list <- c(mean(S001.45.VAN.tablet$VAN), mean(S002.45.VAN.tablet$VAN),mean(S003.45.VAN.tablet$VAN),mean(S004.45.VAN.tablet$VAN),mean(S005.45.VAN.tablet$VAN))
 Avg.45.VAN.tablet <- data.frame(ss.list, Avg.45.VAN.tablet.list)
 colnames(Avg.45.VAN.tablet) <- c('Subject','VAN')
 #VR, VAN, 45
@@ -205,7 +212,7 @@ Avg.45.VAN.vr <- data.frame(ss.list, Avg.45.VAN.vr.list)
 colnames(Avg.45.VAN.vr) <- c('Subject','VAN')
 
 #Tablet, VAN, sit
-Avg.sit.VAN.tablet.list <- c(mean(S001.sit.VAN.tablet$AngEnd), mean(S002.sit.VAN.tablet$AngEnd),mean(S003.sit.VAN.tablet$AngEnd),mean(S004.sit.VAN.tablet$AngEnd),mean(S005.sit.VAN.tablet$AngEnd))
+Avg.sit.VAN.tablet.list <- c(mean(S001.sit.VAN.tablet$VAN), mean(S002.sit.VAN.tablet$VAN),mean(S003.sit.VAN.tablet$VAN),mean(S004.sit.VAN.tablet$VAN),mean(S005.sit.VAN.tablet$VAN))
 Avg.sit.VAN.tablet <- data.frame(ss.list, Avg.sit.VAN.tablet.list)
 colnames(Avg.sit.VAN.tablet) <- c('Subject','VAN')
 #VR, VAN, sit
@@ -214,7 +221,7 @@ Avg.sit.VAN.vr <- data.frame(ss.list, Avg.sit.VAN.vr.list)
 colnames(Avg.sit.VAN.vr) <- c('Subject','VAN')
 
 #Tablet, VAN, Standing
-Avg.stand.VAN.tablet.list <- c(mean(S001.stand.VAN.tablet$AngEnd), mean(S002.stand.VAN.tablet$AngEnd),mean(S003.stand.VAN.tablet$AngEnd),mean(S004.stand.VAN.tablet$AngEnd),mean(S005.stand.VAN.tablet$AngEnd))
+Avg.stand.VAN.tablet.list <- c(mean(S001.stand.VAN.tablet$VAN), mean(S002.stand.VAN.tablet$VAN),mean(S003.stand.VAN.tablet$VAN),mean(S004.stand.VAN.tablet$VAN),mean(S005.stand.VAN.tablet$VAN))
 Avg.stand.VAN.tablet <- data.frame(ss.list, Avg.stand.VAN.tablet.list)
 colnames(Avg.stand.VAN.tablet) <- c('Subject','VAN')
 #VR, VAN, Standing
@@ -223,7 +230,7 @@ Avg.stand.VAN.vr <- data.frame(ss.list, Avg.stand.VAN.vr.list)
 colnames(Avg.stand.VAN.vr) <- c('Subject','VAN')
 
 #Tablet, VAN, Supine
-Avg.supine.VAN.tablet.list <- c(mean(S001.supine.VAN.tablet$AngEnd), mean(S002.supine.VAN.tablet$AngEnd),mean(S003.supine.VAN.tablet$AngEnd),mean(S004.supine.VAN.tablet$AngEnd),mean(S005.supine.VAN.tablet$AngEnd))
+Avg.supine.VAN.tablet.list <- c(mean(S001.supine.VAN.tablet$VAN), mean(S002.supine.VAN.tablet$VAN),mean(S003.supine.VAN.tablet$VAN),mean(S004.supine.VAN.tablet$VAN),mean(S005.supine.VAN.tablet$VAN))
 Avg.supine.VAN.tablet <- data.frame(ss.list, Avg.supine.VAN.tablet.list)
 colnames(Avg.supine.VAN.tablet) <- c('Subject','VAN')
 #VR, VAN, Supine
@@ -274,5 +281,30 @@ t.test(Avg.45.VAN.tablet$VAN,Avg.45.VAN.vr$VAN,paired=TRUE)
 wilcox.test(Avg.45.VAN.tablet$VAN, Avg.45.VAN.vr$VAN, paired=TRUE)
 mean(Avg.45.VAN.tablet$VAN)
 mean(Avg.45.VAN.vr$VAN)
+
+#tests for sitting VAN
+shapiro.test(Avg.sit.VAN.tablet$VAN)
+shapiro.test(Avg.sit.VAN.vr$VAN)
+t.test(Avg.sit.VAN.tablet$VAN,Avg.sit.VAN.vr$VAN,paired=TRUE)
+wilcox.test(Avg.sit.VAN.tablet$VAN, Avg.sit.VAN.vr$VAN, paired=TRUE)
+mean(Avg.sit.VAN.tablet$VAN)
+mean(Avg.sit.VAN.vr$VAN)
+
+#tests for standing VAN
+shapiro.test(Avg.stand.VAN.tablet$VAN)
+shapiro.test(Avg.stand.VAN.vr$VAN)
+t.test(Avg.stand.VAN.tablet$VAN,Avg.stand.VAN.vr$VAN,paired=TRUE)
+wilcox.test(Avg.stand.VAN.tablet$VAN, Avg.stand.VAN.vr$VAN, paired=TRUE)
+mean(Avg.stand.VAN.tablet$VAN)
+mean(Avg.stand.VAN.vr$VAN)
+
+#tests for Supine VAN
+shapiro.test(Avg.supine.VAN.tablet$VAN)
+shapiro.test(Avg.supine.VAN.vr$VAN)
+t.test(Avg.supine.VAN.tablet$VAN,Avg.supine.VAN.vr$VAN,paired=TRUE)
+wilcox.test(Avg.supine.VAN.tablet$VAN, Avg.supine.VAN.vr$VAN, paired=TRUE)
+mean(Avg.supine.VAN.tablet$VAN)
+mean(Avg.supine.VAN.vr$VAN)
+
 
 
