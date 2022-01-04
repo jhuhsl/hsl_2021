@@ -1,0 +1,12 @@
+TrialNum  Mode  Color  YStart  AngStart  YEnd  AngEnd
+ 1 TAN BLUE    30.3    2.20     1.1    0.10
+ 2 TAN BLUE    89.9    6.50     5.4    0.40
+ 3 TAN BLUE   136.6    9.90    13.8    1.00
+ 4 TAN BLUE    80.0    5.80     6.7    0.50
+ 5 TAN BLUE  -108.5   -7.90    35.0    2.50
+ 6 TAN BLUE    67.6    4.90     5.8    0.40
+ 7 TAN BLUE   -82.3   -6.00    15.9    1.20
+ 8 TAN BLUE   -52.5   -3.80    -4.7   -0.30
+ 9 TAN BLUE   -82.5   -6.00     0.7    0.10
+10 TAN BLUE  -117.5   -8.50   -17.3   -1.30
+11 TAN BLUE    26.1    1.90    -7.2   -0.50

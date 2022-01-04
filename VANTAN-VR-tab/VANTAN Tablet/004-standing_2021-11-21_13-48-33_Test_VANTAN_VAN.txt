@@ -1,0 +1,12 @@
+TrialNum  Mode  Color  YStart  AngStart  YEnd  AngEnd
+ 1 VAN BLUE   -55.9   -4.10    -7.9   -0.60
+ 2 VAN BLUE   101.3    7.40     0.3    0.00
+ 3 VAN BLUE   -26.3   -1.90    -7.0   -0.50
+ 4 VAN BLUE   111.2    8.10    -7.8   -0.60
+ 5 VAN BLUE   -72.1   -5.20    -3.1   -0.20
+ 6 VAN BLUE   -73.6   -5.40    -5.1   -0.40
+ 7 VAN BLUE   116.3    8.50    -1.0   -0.10
+ 8 VAN BLUE   -13.4   -1.00    -0.7    0.00
+ 9 VAN BLUE    89.7    6.50    -3.8   -0.30
+10 VAN BLUE  -102.8   -7.50    -2.8   -0.20
+11 VAN BLUE   -91.8   -6.70    -5.3   -0.40

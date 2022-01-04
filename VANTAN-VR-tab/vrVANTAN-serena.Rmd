@@ -1,0 +1,589 @@
+---
+title: "R Notebook"
+output: PDF File
+---
+
+Import data:
+```{r}
+library(readxl)
+#subject 1
+S001.45.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/001-45_2021-11-21_13-58-58_Test_VANTAN_VAN.txt", sep="")
+S001.45.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/001-45_2021-11-21_13-59-39_Test_VANTAN_TAN.txt", sep="")
+S001.sit.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/001-sitting_2021-11-21_13-56-54_Test_VANTAN_VAN.txt", sep="")
+S001.sit.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/001-sitting_2021-11-21_13-57-34_Test_VANTAN_TAN.txt", sep="")
+S001.stand.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/001-standing_2021-11-21_14-01-50_Test_VANTAN_VAN.txt", sep="")
+S001.stand.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/001-standing_2021-11-21_14-02-20_Test_VANTAN_TAN.txt", sep="")
+S001.supine.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/001-supine_2021-11-21_14-04-43_Test_VANTAN_VAN.txt", sep="")
+S001.supine.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/001-supine_2021-11-21_14-05-26_Test_VANTAN_TAN.txt", sep="")
+#vr
+S001.45.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/001.sitting.45.csv")
+S001.sit.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/001.sitting.csv")
+S001.stand.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/001.standing.csv")
+S001.supine.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/001.supine.csv")
+
+#subject 2
+#tablet
+S002.45.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/002-45_2021-11-21_14-18-33_Test_VANTAN_VAN.txt", sep="")
+S002.45.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/002-45_2021-11-21_14-19-09_Test_VANTAN_TAN.txt", sep="")
+S002.sit.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/002-sitting_2021-11-21_14-20-23_Test_VANTAN_VAN.txt", sep="")
+S002.sit.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/002-sitting_2021-11-21_14-20-58_Test_VANTAN_TAN.txt", sep="")
+S002.stand.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/002-standing_2021-11-21_14-11-41_Test_VANTAN_VAN.txt", sep="")
+S002.stand.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/002-standing_2021-11-21_14-12-24_Test_VANTAN_TAN.txt", sep="")
+S002.supine.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/002-supine_2021-11-21_14-14-36_Test_VANTAN_VAN.txt", sep="")
+S002.supine.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/002-supine_2021-11-21_14-15-17_Test_VANTAN_TAN.txt", sep="")
+#vr
+S002.45.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/002.sitting.45.csv")
+S002.sit.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/002.sitting.csv")
+S002.stand.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/002.standing.csv")
+S002.supine.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/002.supine.csv")
+
+#subject 3
+#tablet
+S003.45.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/003-45_2021-11-21_13-29-47_Test_VANTAN_VAN.txt", sep="")
+S003.45.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/003-45_2021-11-21_13-30-24_Test_VANTAN_TAN.txt", sep="")
+S003.sit.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/003-sitting_2021-11-21_13-27-06_Test_VANTAN_VAN.txt", sep="")
+S003.sit.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/003-sitting_2021-11-21_13-27-56_Test_VANTAN_TAN.txt", sep="")
+S003.stand.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/003-standing_2021-11-21_13-33-46_Test_VANTAN_VAN.txt", sep="")
+S003.stand.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/003-standing_2021-11-21_13-34-25_Test_VANTAN_TAN.txt", sep="")
+S003.supine.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/003-supine_2021-11-21_13-39-45_Test_VANTAN_VAN.txt", sep="")
+S003.supine.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/003-supine_2021-11-21_13-40-18_Test_VANTAN_TAN.txt", sep="")
+#vr
+S003.45.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/003.sitting.45.csv")
+S003.sit.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/003.sitting.csv")
+S003.stand.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/003.standing.csv")
+S003.supine.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/003.supine.csv")
+
+#subject 4
+#tablet
+S004.45.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/004-45_2021-11-21_13-53-54_Test_VANTAN_VAN.txt", sep="")
+S004.45.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/004-45_2021-11-21_13-54-32_Test_VANTAN_TAN.txt", sep="")
+S004.sit.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/004-sitting_2021-11-21_13-51-54_Test_VANTAN_VAN.txt", sep="")
+S004.sit.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/004-sitting_2021-11-21_13-52-34_Test_VANTAN_TAN.txt", sep="")
+S004.stand.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/004-standing_2021-11-21_13-48-33_Test_VANTAN_VAN.txt", sep="")
+S004.stand.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/004-standing_2021-11-21_13-49-14_Test_VANTAN_TAN.txt", sep="")
+S004.supine.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/004-supine_2021-11-21_13-44-55_Test_VANTAN_VAN.txt", sep="")
+S004.supine.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/004-supine_2021-11-21_13-45-51_Test_VANTAN_TAN.txt", sep="")
+#vr
+S004.45.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/004.sitting.45.csv")
+S004.sit.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/004.sitting.csv")
+S004.stand.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/004.standing.csv")
+S004.supine.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/004.supine.csv")
+
+#subject 5
+#tablet
+S005.45.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/005-45_2021-11-21_16-29-28_Test_VANTAN_VAN.txt", sep="")
+S005.45.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/005-45_2021-11-21_16-30-15_Test_VANTAN_TAN.txt", sep="")
+S005.sit.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/005-sitting_2021-11-21_16-34-23_Test_VANTAN_VAN.txt", sep="")
+S005.sit.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/005-sitting_2021-11-21_16-35-08_Test_VANTAN_TAN.txt", sep="")
+S005.stand.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/005-standing_2021-11-21_16-26-18_Test_VANTAN_VAN.txt", sep="")
+S005.stand.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/005-standing_2021-11-21_16-26-59_Test_VANTAN_TAN.txt", sep="")
+S005.supine.VAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/005-supine_2021-11-21_16-37-08_Test_VANTAN_VAN.txt", sep="")
+S005.supine.TAN.tablet<- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/005-supine_2021-11-21_16-37-56_Test_VANTAN_TAN.txt", sep="")
+#vr
+S005.45.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/005.sitting.45.csv")
+S005.sit.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/005.sitting.csv")
+S005.stand.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/005.standing.csv")
+S005.supine.VR <- read.csv("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN VR/005.supine.csv")
+
+#subject distance from tablet
+Subject_arm_length <- read_excel("~/Documents/GitHub/hsl_2021/VANTAN-VR-tab/VANTAN Tablet/Subject arm length.xlsx")
+
+```
+
+Clean data:
+```{r}
+
+#have to drop trials after 15 in VR datasets 
+#45 deg condition
+S001.45.VR <- S001.45.VR[c(1:15,21:35),]
+S002.45.VR <- S002.45.VR[c(1:15,36:50),]
+S003.45.VR <- S003.45.VR[c(1:15,21:35),]
+S004.45.VR <- S004.45.VR[c(1:15,21:35),]
+S005.45.VR <- S005.45.VR[c(1:15,21:35),]
+#sitting condition
+S001.sit.VR <- S001.sit.VR[c(1:15,21:35),]
+S002.sit.VR <- S002.sit.VR[c(1:15,36:50),]
+S003.sit.VR <- S003.sit.VR[c(1:15,21:35),]
+S004.sit.VR <- S004.sit.VR[c(1:15,21:35),]
+S005.sit.VR <- S005.sit.VR[c(1:15,21:35),]
+#standing condition
+S001.stand.VR <- S001.stand.VR[c(1:15,21:35),]
+S002.stand.VR <- S002.stand.VR[c(1:15,37:51),]
+S003.stand.VR <- S003.stand.VR[c(1:15,21:35),]
+S004.stand.VR <- S004.stand.VR[c(1:15,21:35),]
+S005.stand.VR <- S005.stand.VR[c(1:15,21:35),]
+#supine condition 
+S001.supine.VR <- S001.supine.VR[c(1:15,21:35),]
+S002.supine.VR <- S002.supine.VR[c(1:15,36:50),]
+S003.supine.VR <- S003.supine.VR[c(1:15,21:35),]
+S004.supine.VR <- S004.supine.VR[c(1:15,21:35),]
+S005.supine.VR <- S005.supine.VR[c(1:15,21:35),]
+
+#Specific Corrections
+#Subject 005 reported skipping trials 1-3 TAN VR Standing 
+S005.stand.VR <- S005.stand.VR[-c(16:18),]
+#Subject 003 reported skipping trial 1 TAN VR Sitting
+S003.sit.VR <- S003.sit.VR[-c(16),]
+#Subject 004 reported skipping trials 12-15 in VR VAN and TAN supine  
+S004.supine.VR <- S004.supine.VR[-c(12:15,27:30),]
+
+```
+
+Put into big matrix:
+```{r}
+
+#EDIT: TAB and VR matrix; 8 col; 1:4 is VAN, 5:8 is TAN in (sit,stand,supine,45), 5 row = subject#)
+
+TAB = rbind(cbind(S001.sit.VAN.tablet$YEnd,S001.stand.VAN.tablet$YEnd,S001.supine.VAN.tablet$YEnd,S001.45.VAN.tablet$YEnd,
+                      S001.sit.TAN.tablet$AngEnd,S001.stand.TAN.tablet$AngEnd,S001.supine.TAN.tablet$AngEnd,S001.45.TAN.tablet$AngEnd),
+                cbind(S002.sit.VAN.tablet$YEnd,S002.stand.VAN.tablet$YEnd,S002.supine.VAN.tablet$YEnd,S002.45.VAN.tablet$YEnd,
+                      S002.sit.TAN.tablet$AngEnd,S002.stand.TAN.tablet$AngEnd,S002.supine.TAN.tablet$AngEnd,S002.45.TAN.tablet$AngEnd),
+                cbind(S003.sit.VAN.tablet$YEnd,S003.stand.VAN.tablet$YEnd,S003.supine.VAN.tablet$YEnd,S003.45.VAN.tablet$YEnd,
+                      S003.sit.TAN.tablet$AngEnd,S003.stand.TAN.tablet$AngEnd,S003.supine.TAN.tablet$AngEnd,S003.45.TAN.tablet$AngEnd),
+                cbind(S004.sit.VAN.tablet$YEnd,S004.stand.VAN.tablet$YEnd,S004.supine.VAN.tablet$YEnd,S004.45.VAN.tablet$YEnd,
+                      S004.sit.TAN.tablet$AngEnd,S004.stand.TAN.tablet$AngEnd,S004.supine.TAN.tablet$AngEnd,S004.45.TAN.tablet$AngEnd),
+                cbind(S005.sit.VAN.tablet$YEnd,S005.stand.VAN.tablet$YEnd,S005.supine.VAN.tablet$YEnd,S005.45.VAN.tablet$YEnd,
+                      S005.sit.TAN.tablet$AngEnd,S005.stand.TAN.tablet$AngEnd,S005.supine.TAN.tablet$AngEnd,S005.45.TAN.tablet$AngEnd)
+          )
+subjects_tab = rbind(t(t(rep(1, 11))),t(t(rep(2, 11))),t(t(rep(3, 11))),t(t(rep(4, 11))),t(t(rep(5, 11))))
+TAB = cbind(subjects_tab,TAB)
+colnames(TAB) = c("subjectID","sit_VAN","stand_VAN","supine_VAN","45_VAN","sit_TAN","stand_TAN","supine_TAN","45_TAN")
+
+VR = rbind(
+              cbind(S001.sit.VR$Accuracy[S001.sit.VR$Test=='vertical'],S001.stand.VR$Accuracy[S001.stand.VR$Test=='vertical'],S001.supine.VR$Accuracy[S001.supine.VR$Test=='vertical'],S001.45.VR$Accuracy[S001.45.VR$Test=='vertical'],
+              S001.sit.VR$Accuracy[S001.sit.VR$Test=='tangential'],S001.stand.VR$Accuracy[S001.stand.VR$Test=='tangential'],S001.supine.VR$Accuracy[S001.supine.VR$Test=='tangential'],S001.45.VR$Accuracy[S001.45.VR$Test=='tangential']),
+                cbind(S002.sit.VR$Accuracy[S002.sit.VR$Test=='vertical'],S002.stand.VR$Accuracy[S002.stand.VR$Test=='vertical'],S002.supine.VR$Accuracy[S002.supine.VR$Test=='vertical'],S002.45.VR$Accuracy[S002.45.VR$Test=='vertical'],
+              S002.sit.VR$Accuracy[S002.sit.VR$Test=='tangential'],S002.stand.VR$Accuracy[S002.stand.VR$Test=='tangential'],S002.supine.VR$Accuracy[S002.supine.VR$Test=='tangential'],S002.45.VR$Accuracy[S002.45.VR$Test=='tangential']),
+                cbind(S003.sit.VR$Accuracy[S003.sit.VR$Test=='vertical'],S003.stand.VR$Accuracy[S003.stand.VR$Test=='vertical'],S003.supine.VR$Accuracy[S003.supine.VR$Test=='vertical'],S003.45.VR$Accuracy[S003.45.VR$Test=='vertical'],
+              S003.sit.VR$Accuracy[S003.sit.VR$Test=='tangential'],S003.stand.VR$Accuracy[S003.stand.VR$Test=='tangential'],S003.supine.VR$Accuracy[S003.supine.VR$Test=='tangential'],S003.45.VR$Accuracy[S003.45.VR$Test=='tangential']),
+                cbind(S004.sit.VR$Accuracy[S004.sit.VR$Test=='vertical'],S004.stand.VR$Accuracy[S004.stand.VR$Test=='vertical'],S004.supine.VR$Accuracy[S004.supine.VR$Test=='vertical'],S004.45.VR$Accuracy[S004.45.VR$Test=='vertical'],
+              S004.sit.VR$Accuracy[S004.sit.VR$Test=='tangential'],S004.stand.VR$Accuracy[S004.stand.VR$Test=='tangential'],S004.supine.VR$Accuracy[S004.supine.VR$Test=='tangential'],S004.45.VR$Accuracy[S004.45.VR$Test=='tangential']),
+                cbind(S005.sit.VR$Accuracy[S005.sit.VR$Test=='vertical'],S005.stand.VR$Accuracy[S005.stand.VR$Test=='vertical'],S005.supine.VR$Accuracy[S005.supine.VR$Test=='vertical'],S005.45.VR$Accuracy[S005.45.VR$Test=='vertical'],
+              S005.sit.VR$Accuracy[S005.sit.VR$Test=='tangential'],S005.stand.VR$Accuracy[S005.stand.VR$Test=='tangential'],S005.supine.VR$Accuracy[S005.supine.VR$Test=='tangential'],S005.45.VR$Accuracy[S005.45.VR$Test=='tangential'])
+              
+              )
+subjects_vr = rbind(t(t(rep(1, 15))),t(t(rep(2, 15))),t(t(rep(3, 15))),t(t(rep(4, 15))),t(t(rep(5, 15))))
+VR = cbind(subjects_vr,VR)
+colnames(VR) = c("subjectID","sit_VAN","stand_VAN","supine_VAN","45_VAN","sit_TAN","stand_TAN","supine_TAN","45_TAN")
+
+
+#Make it normal bc idk why it doesn't work otherwise
+TAB = data.frame(data.matrix(TAB))
+VR= data.frame(data.matrix(VR))
+
+```
+
+
+Convert Values to Angles
+```{r}
+#need to convert VAN data from raw to actual deviation
+#vertical ocular misalignment = 180◦/pi*tan^−1(((pm − ps)/(pp))/d)
+#where pM is the subject-selected position of the moving line in pixels, pS is the position ofthe stationary line in pixels, d is the distance
+#between the subject’s eyes and the tablet screen in inches, and pp
+#is the tablet’s resolution in pixels per inch
+
+# VR values are not comparable to tablet ? problem?
+
+TAB[1:11,2:5] = 180/pi*atan((TAB[1:11,2:5]/218)/Subject_arm_length$`Arm Length`[1])
+TAB[12:22,2:5] = 180/pi*atan((TAB[12:22,2:5]/218)/Subject_arm_length$`Arm Length`[2])
+TAB[23:33,2:5] = 180/pi*atan((TAB[23:33,2:5]/218)/Subject_arm_length$`Arm Length`[3])
+TAB[34:44,2:5] = 180/pi*atan((TAB[34:44,2:5]/218)/Subject_arm_length$`Arm Length`[4])
+TAB[45:55,2:5] = 180/pi*atan((TAB[45:55,2:5]/218)/Subject_arm_length$`Arm Length`[5])
+
+```
+
+
+VAN & TAN means
+```{r}
+
+TAB_avg = data.frame(data.matrix(
+                    rbind(colMeans(TAB[1:11,2:9][sapply(TAB[1:11,2:9], is.numeric)]),
+                    colMeans(TAB[12:22,2:9][sapply(TAB[12:22,2:9], is.numeric)]),
+                    colMeans(TAB[23:33,2:9][sapply(TAB[23:33,2:9], is.numeric)]),
+                    colMeans(TAB[34:44,2:9][sapply(TAB[34:44,2:9], is.numeric)]),
+                    colMeans(TAB[45:55,2:9][sapply(TAB[45:55,2:9], is.numeric)])
+                    )))
+
+TAB_avg = cbind(c(1,2,3,4,5),TAB_avg)
+
+VR_avg = data.frame(data.matrix(
+                  rbind(colMeans(VR[1:15,2:9][sapply(VR[1:15,2:9], is.numeric)]),
+                    colMeans(VR[16:30,2:9][sapply(VR[16:30,2:9], is.numeric)]),
+                    colMeans(VR[31:45,2:9][sapply(VR[31:45,2:9], is.numeric)]),
+                    colMeans(VR[46:60,2:9][sapply(VR[46:60,2:9], is.numeric)]),
+                    colMeans(VR[60:75,2:9][sapply(VR[60:75,2:9], is.numeric)])
+                    )))
+VR_avg = cbind(c(1,2,3,4,5),VR_avg)
+
+```
+
+First test: paired-t, subjects matters (includes shapiro-wilks normality test)
+```{r}
+
+#t-tests comparing each condition in each modality, by instrument
+ttest.bycondition.list = list()
+for (i in 1:8) 
+  {
+    if ( shapiro.test(TAB_avg[,i+1])$p.value < 0.05 || shapiro.test(VR_avg[,i+1])$p.value < 0.05)
+    {
+      wilk = wilcox.test(TAB_avg[,i+1], VR_avg[,i+1], paired=TRUE)
+      ttest.bycondition.list[[i]] = wilk$p.value
+    } 
+    else {
+      ttest = t.test(TAB_avg[,i+1], VR_avg[,i+1], paired=TRUE)
+      ttest.bycondition.list[[i]] = ttest$p.value
+    }
+  }
+ttest.bycondition = data.frame(rbind(ttest.bycondition.list))
+colnames(ttest.bycondition) = colnames(TAB_avg[,2:9])
+print.data.frame(ttest.bycondition)
+```
+
+Second test: paired-t, subjects don't matter (includes shapiro-wilks normality test)
+```{r}
+#t-tests comparing each condition in each modality, by instrument
+#preserve all VR data and apply unpaired
+#ignoring for now
+ttest.bycondition.pop.list = list()
+for (i in 1:8) 
+  {
+    if ( shapiro.test(TAB[,i+1])$p.value < 0.05 || shapiro.test(VR[,i+1])$p.value < 0.05)
+    {
+      wilk = wilcox.test(TAB[,i+1], VR[,i+1], paired=FALSE)
+      ttest.bycondition.pop.list[[i]] = wilk$p.value
+    } 
+    else {
+      ttest = t.test(TAB[,i+1], VR[,i+1], paired=FALSE)
+      ttest.bycondition.pop.list[[i]] = ttest$p.value
+    }
+  }
+ttest.bycondition.pop = data.frame(rbind(ttest.bycondition.pop.list))
+colnames(ttest.bycondition.pop) = colnames(TAB[,2:9])
+
+
+#cut VR data and apply paired
+VR.cut = rbind(VR[1:11,],VR[16:26,],VR[31:41,],VR[46:56,],VR[61:71,])
+ttest.bycondition.popcut.list = list()
+for (i in 1:8) 
+  {
+    if ( shapiro.test(TAB[,i+1])$p.value < 0.05 || shapiro.test(VR.cut[,i+1])$p.value < 0.05)
+    {
+      wilk = wilcox.test(TAB[,i+1], VR.cut[,i+1], paired=TRUE)
+      ttest.bycondition.popcut.list[[i]] = wilk$p.value
+    } 
+    else {
+      ttest = t.test(TAB[,i+1], VR.cut[,i+1], paired=TRUE)
+      ttest.bycondition.popcut.list[[i]] = ttest$p.value
+    }
+  }
+ttest.bycondition.popcut = data.frame(rbind(ttest.bycondition.popcut.list))
+colnames(ttest.bycondition.popcut) = colnames(TAB[,2:9])
+print.data.frame(ttest.bycondition.popcut)
+
+```
+
+Third test: paired-t, subjects matter, conditions don't matter - any overall differences between VR and TAB? (with avg data)
+```{r}
+VR_avg.pop = data.frame(cbind(stack(VR_avg[2:5])[,1],stack(VR_avg[6:9])[,1]))
+colnames(VR_avg.pop) = c("VAN","TAN")
+TAB_avg.pop = data.frame(cbind(stack(TAB_avg[2:5])[,1],stack(TAB_avg[6:9])[,1]))
+colnames(TAB_avg.pop) = c("VAN","TAN")
+
+
+ttest.conditiondm.pop.list = list()
+for (i in 1:2) 
+  {
+    if ( shapiro.test(TAB_avg.pop[,i])$p.value < 0.05 || shapiro.test(VR_avg.pop[,i])$p.value < 0.05)
+    {
+      wilk = wilcox.test(TAB_avg.pop[,i], VR_avg.pop[,i], paired=TRUE)
+      ttest.conditiondm.pop.list[[i]] = wilk$p.value
+    } 
+    else {
+      ttest = t.test(TAB_avg.pop[,i], VR_avg.pop[,i], paired=TRUE)
+      ttest.conditiondm.pop.list[[i]] = ttest$p.value
+    }
+  }
+ttest.conditiondm.pop = data.frame(rbind(ttest.conditiondm.pop.list))
+colnames(ttest.conditiondm.pop) = c("VAN","TAN")
+
+print.data.frame(ttest.conditiondm.pop)
+
+```
+
+Fourth test: paired & unpaired t-test, subjects don't matter, conditions don't matter - any overall differences between VR and TAB? (with all data)
+```{r}
+# with VR cut
+VR.pop = data.frame(cbind(stack(VR.cut[2:5])[,1],stack(VR.cut[6:9])[,1]))
+colnames(VR.pop) = c("VAN","TAN")
+TAB.pop = data.frame(cbind(stack(TAB[2:5])[,1],stack(TAB[6:9])[,1]))
+colnames(TAB.pop) = c("VAN","TAN")
+
+ttest.conditiondm.popdm.list = list()
+for (i in 1:2) 
+  {
+    if (shapiro.test(TAB.pop[,i])$p.value < 0.05 || shapiro.test(VR.pop[,i])$p.value < 0.05)
+    {
+      wilk = wilcox.test(TAB.pop[,i], VR.pop[,i], paired=TRUE)
+      ttest.conditiondm.popdm.list[[i]] = wilk$p.value
+    } 
+    else {
+      ttest = t.test(TAB.pop[,i], VR.pop[,i], paired=TRUE)
+      ttest.conditiondm.popdm.list[[i]] = ttest$p.value
+    }
+  }
+ttest.conditiondm.popdm = data.frame(rbind(ttest.conditiondm.popdm.list))
+colnames(ttest.conditiondm.popdm) = c("VAN","TAN")
+print.data.frame(ttest.conditiondm.popdm)
+
+```
+
+
+Fifth test: one-way repeated measures ANOVA - are conditions are different WITHIN modalities & instruments
+```{r}
+
+# for TAB/VR avg, figure out if conditions are different within modality
+# make factors base on conditions
+conditionsVAN = rbind(t(t(rep(colnames(TAB_avg)[2],5))),t(t(rep(colnames(TAB_avg)[3],5))),t(t(rep(colnames(TAB_avg)[4],5))),t(t(rep(colnames(TAB_avg)[5],5))))
+conditionsTAN = rbind(t(t(rep(colnames(TAB_avg)[6],5))),t(t(rep(colnames(TAB_avg)[7],5))),t(t(rep(colnames(TAB_avg)[8],5))),t(t(rep(colnames(TAB_avg)[9],5))))
+
+TAB_avg.aov.van = data.frame(cbind(conditionsVAN,stack(TAB_avg[,2:5])[,1]))
+TAB_avg.aov.van$X1 = as.factor(TAB_avg.aov.van$X1)
+colnames(TAB_avg.aov.van) = c("conditionsVAN","VANtab")
+cond.VAN.tab.aov = aov(VANtab ~ conditionsVAN, data = TAB_avg.aov.van)
+summary(cond.VAN.tab.aov)
+
+TAB_avg.aov.tan = data.frame(cbind(conditionsTAN,stack(TAB_avg[,6:9])[,1]))
+TAB_avg.aov.tan$X1 = as.factor(TAB_avg.aov.tan$X1)
+colnames(TAB_avg.aov.tan) = c("conditionsTAN","TANtab")
+cond.TAN.tab.aov = aov(TANtab ~ conditionsTAN, data = TAB_avg.aov.tan)
+summary(cond.TAN.tab.aov)
+
+VR_avg.aov.van = data.frame(cbind(conditionsVAN,stack(VR_avg[,2:5])[,1]))
+VR_avg.aov.van$X1 = as.factor(VR_avg.aov.van$X1)
+colnames(VR_avg.aov.van) = c("conditionsVAN","VANvr")
+cond.VAN.vr.aov = aov(VANvr ~ conditionsVAN, data = VR_avg.aov.van)
+summary(cond.VAN.vr.aov)
+
+VR_avg.aov.tan = data.frame(cbind(conditionsTAN,stack(VR_avg[,6:9])[,1]))
+VR_avg.aov.tan$X1 = as.factor(VR_avg.aov.tan$X1)
+colnames(VR_avg.aov.tan) = c("conditionsTAN","TANvr")
+cond.TAN.vr.aov = aov(TANvr ~ conditionsTAN, data = VR_avg.aov.tan)
+summary(cond.TAN.vr.aov)
+
+```
+
+Sixth test: one-way repeated measures ANOVA - are there differences across the conditions, between modalities (with avg data)
+```{r}
+
+#organize into VAN and TAN, mix modalities
+conditionsVAN.mod = rbind(t(t(rep("sitTABvan",5))),t(t(rep("standTABvan",5))),t(t(rep("supineTABvan",5))),t(t(rep("45TABvan",5))),t(t(rep("sitVRvan",5))),t(t(rep("standVRvan",5))),t(t(rep("supineVRvan",5))),t(t(rep("45VRvan",5))))
+conditionsTAN.mod = rbind(t(t(rep("sitTABtan",5))),t(t(rep("standTABtan",5))),t(t(rep("supineTABtan",5))),t(t(rep("45TABtan",5))),t(t(rep("sitVRtan",5))),t(t(rep("standVRtan",5))),t(t(rep("supineVRtan",5))),t(t(rep("45VRtan",5))))
+
+VAN_avg = data.frame(cbind(TAB_avg$sit_VAN,TAB_avg$stand_VAN,TAB_avg$supine_VAN,TAB_avg$X45_VAN,
+                VR_avg$sit_VAN,VR_avg$stand_VAN,VR_avg$supine_VAN,VR_avg$X45_VAN))
+VAN_avg = data.frame(cbind(conditionsVAN.mod,stack(VAN_avg)[,1]))
+VAN_avg$X1 = as.factor(VAN_avg$X1)
+colnames(VAN_avg) = c("conditionsVAN.mod","VAN.mod")
+cond.VAN_avg.aov = aov(VAN.mod ~ conditionsVAN.mod, data = VAN_avg)
+summary(cond.VAN_avg.aov)
+
+TAN_avg = data.frame(cbind(TAB_avg$sit_TAN,TAB_avg$stand_TAN,TAB_avg$supine_TAN,TAB_avg$X45_TAN,
+                VR_avg$sit_TAN,VR_avg$stand_TAN,VR_avg$supine_TAN,VR_avg$X45_TAN))
+TAN_avg = data.frame(cbind(conditionsTAN.mod,stack(TAN_avg)[,1]))
+TAN_avg$X1 = as.factor(TAN_avg$X1)
+colnames(TAN_avg) = c("conditionsTAN.mod","TAN.mod")
+cond.TAN_avg.aov = aov(TAN.mod ~ conditionsTAN.mod, data = TAN_avg)
+summary(cond.TAN_avg.aov)
+
+
+```
+Seventh test: one-way repeated measures ANOVA - are there differences across the conditions, between modalities (all data)
+```{r}
+
+#organize into VAN and TAN, mix modalities
+conditionsVANall.mod = rbind(t(t(rep("sitTABvan",55))),t(t(rep("standTABvan",55))),t(t(rep("supineTABvan",55))),t(t(rep("45TABvan",55))),t(t(rep("sitVRvan",55))),t(t(rep("standVRvan",55))),t(t(rep("supineVRvan",55))),t(t(rep("45VRvan",55))))
+conditionsTANall.mod = rbind(t(t(rep("sitTABtan",55))),t(t(rep("standTABtan",55))),t(t(rep("supineTABtan",55))),t(t(rep("45TABtan",55))),t(t(rep("sitVRtan",55))),t(t(rep("standVRtan",55))),t(t(rep("supineVRtan",55))),t(t(rep("45VRtan",55))))
+
+VAN_all = data.frame(cbind(TAB$sit_VAN,TAB$stand_VAN,TAB$supine_VAN,TAB$X45_VAN,
+                VR.cut$sit_VAN,VR.cut$stand_VAN,VR.cut$supine_VAN,VR.cut$X45_VAN))
+VAN_all = data.frame(cbind(conditionsVANall.mod,stack(VAN_all)[,1]))
+VAN_all$X1 = as.factor(VAN_all$X1)
+colnames(VAN_all) = c("conditionsVANall.mod","VAN_all.mod")
+cond.VAN_all.aov = aov(VAN_all.mod ~ conditionsVANall.mod, data = VAN_all)
+summary(cond.VAN_all.aov)
+
+TAN_all = data.frame(cbind(TAB$sit_TAN,TAB$stand_TAN,TAB$supine_TAN,TAB$X45_TAN,
+                VR.cut$sit_TAN,VR.cut$stand_TAN,VR.cut$supine_TAN,VR.cut$X45_TAN))
+TAN_all = data.frame(cbind(conditionsTANall.mod,stack(TAN_all)[,1]))
+TAN_all$X1 = as.factor(TAN_all$X1)
+colnames(TAN_all) = c("conditionsTANall.mod","TAN_all.mod")
+cond.TAN_all.aov = aov(TAN_all.mod ~ conditionsTANall.mod, data = TAN_all)
+summary(cond.TAN_all.aov)
+
+
+```
+
+
+Eighth test: two way repeated measures ANOVA - is alignment affected by condition and modality (with avg data)
+```{r}
+# set up array using 2 factors: conditions (4) and modality (2)
+#conditionVAN.nomod =  rbind(t(t(rep("sit_van",5))),t(t(rep("stand_van",5))),t(t(rep("supine_van",5))),t(t(rep("45_van",5))),t(t(rep("sit_van",5))),t(t(rep("stand_van",5))),t(t(rep("supine_van",5))),t(t(rep("45_van",5))))
+
+conditionVAN.nomod =  rep(rep(c("sit_van","stand_van","supine_van","45_van"),each = 5),2)
+
+conditionTAN.nomod =  rep(rep(c("sit_tan","stand_tan","supine_tan","45_tan"),each = 5),2)
+
+modVAN = rbind(t(t(rep("TABvan",20))),t(t(rep("VRvan",20))))
+VAN_avg.2aov = data.frame(cbind(modVAN,conditionVAN.nomod,VAN_avg$VAN.mod))
+colnames(VAN_avg.2aov) = c("mod","cond","VAN")
+VAN_avg.2aov$mod = as.factor(VAN_avg.2aov$mod)
+VAN_avg.2aov$cond = as.factor(VAN_avg.2aov$cond)
+VAN_avg.2aov.aov = aov(VAN ~ cond * mod,data = VAN_avg.2aov)
+summary(VAN_avg.2aov.aov)
+
+modTAN = rbind(t(t(rep("TABtan",20))),t(t(rep("VRtan",20))))
+TAN_avg.2aov = data.frame(cbind(modTAN,conditionTAN.nomod,TAN_avg$TAN.mod))
+colnames(TAN_avg.2aov) = c("mod","cond","TAN")
+TAN_avg.2aov$mod = as.factor(TAN_avg.2aov$mod)
+TAN_avg.2aov$cond = as.factor(TAN_avg.2aov$cond)
+TAN_avg.2aov.aov = aov(TAN ~ cond * mod,data = TAN_avg.2aov)
+summary(TAN_avg.2aov.aov)
+
+```
+Ninth test: two way repeated measures ANOVA - is alignment affected by condition and modality (with all data)
+```{r}
+# set up array using 2 factors: conditions (4) and modality (2)
+#conditionVAN.nomod =  rbind(t(t(rep("sit_van",5))),t(t(rep("stand_van",5))),t(t(rep("supine_van",5))),t(t(rep("45_van",5))),t(t(rep("sit_van",5))),t(t(rep("stand_van",5))),t(t(rep("supine_van",5))),t(t(rep("45_van",5))))
+
+conditionVAN_all.nomod =  rep(rep(c("sit_van","stand_van","supine_van","45_van"),each = 55),2)
+
+conditionTAN_all.nomod =  rep(rep(c("sit_tan","stand_tan","supine_tan","45_tan"),each = 55),2)
+
+modVAN.all = rbind(t(t(rep("TABvan",55))),t(t(rep("VRvan",55))))
+VAN_all.2aov = data.frame(cbind(modVAN.all,conditionVAN_all.nomod,VAN_all$VAN_all.mod))
+colnames(VAN_all.2aov) = c("mod_all","cond_all","VAN_all")
+VAN_all.2aov$mod_all = as.factor(VAN_all.2aov$mod_all)
+VAN_all.2aov$cond_all = as.factor(VAN_all.2aov$cond_all)
+VAN_all.2aov.aov = aov(VAN_all ~ cond_all * mod_all,data = VAN_all.2aov)
+summary(VAN_all.2aov.aov)
+
+modTAN.all = rbind(t(t(rep("TABtan",55))),t(t(rep("VRtan",55))))
+TAN_all.2aov = data.frame(cbind(modTAN.all,conditionTAN_all.nomod,TAN_all$TAN_all.mod))
+colnames(TAN_all.2aov) = c("mod_all","cond_all","TAN_all")
+TAN_all.2aov$mod_all = as.factor(TAN_all.2aov$mod_all)
+TAN_all.2aov$cond_all = as.factor(TAN_all.2aov$cond_all)
+TAN_all.2aov.aov = aov(TAN_all ~ cond_all * mod_all,data = TAN_all.2aov)
+summary(TAN_avg.2aov.aov)
+
+```
+Tenth test: some wacky clustering stuff - VAN
+```{r}
+
+VAN_clust = data.frame(cbind(c(TAB$sit_VAN,VR.cut$sit_VAN),c(TAB$stand_VAN,VR.cut$stand_VAN),c(TAB$supine_VAN,VR.cut$supine_VAN),c(TAB$X45_VAN,VR.cut$X45_VAN)))
+VAN_clust = data.frame(cbind(modVAN.all,VAN_clust))
+colnames(VAN_clust) = c("modality","sit","stand","supine","45deg")
+
+
+library(mclust);
+#rownames(VAN_clust) = VAN_clust[,1];
+mc_van = Mclust(VAN_clust);
+mc_van$classification;
+mc_van$G
+km  = kmeans(VAN_clust[,2:5], centers = 8);
+km$cluster; # what does this mean @?@?@????!?!
+
+#plot(VAN_clust)
+i = 2;j = 3; 
+plot(VAN_clust[,i], VAN_clust[,j], xlab='sitVAN', ylab='standVAN',main="Sit vs Stand VAN" ,type="n")
+for(s in 1:nrow(VAN_clust)) {
+  text(VAN_clust[s,i], VAN_clust[s,j], VAN_clust[s,1], col=km$cluster[s])
+}
+
+i = 2;j = 4;
+plot(VAN_clust[,i], VAN_clust[,j], xlab='sitVAN', ylab='supineVAN',main="Sit vs Supine VAN" ,type="n")
+for(s in 1:nrow(VAN_clust)) {
+  text(VAN_clust[s,i], VAN_clust[s,j], VAN_clust[s,1], col=km$cluster[s])
+}
+
+i = 2;j = 5; 
+plot(VAN_clust[,i], VAN_clust[,j], xlab='sitVAN', ylab='45degVAN',main="Sit vs 45deg HT VAN" ,type="n")
+for(s in 1:nrow(VAN_clust)) {
+  text(VAN_clust[s,i], VAN_clust[s,j], VAN_clust[s,1], col=km$cluster[s])
+}
+
+i = 3;j = 4; 
+plot(VAN_clust[,i], VAN_clust[,j], xlab='standVAN', ylab='supineVAN',main="Stand vs Supine VAN" ,type="n")
+for(s in 1:nrow(VAN_clust)) {
+  text(VAN_clust[s,i], VAN_clust[s,j], VAN_clust[s,1], col=km$cluster[s])
+}
+
+i = 3;j = 5; 
+plot(VAN_clust[,i], VAN_clust[,j], xlab='standVAN', ylab='45degVAN',main="Stand vs 45deg HT VAN" ,type="n")
+for(s in 1:nrow(VAN_clust)) {
+  text(VAN_clust[s,i], VAN_clust[s,j], VAN_clust[s,1], col=km$cluster[s])
+}
+
+i = 4;j = 5; 
+plot(VAN_clust[,i], VAN_clust[,j], xlab='supineVAN', ylab='45degVAN',main="Supine vs 45deg HT VAN" ,type="n")
+for(s in 1:nrow(VAN_clust)) {
+  text(VAN_clust[s,i], VAN_clust[s,j], VAN_clust[s,1], col=km$cluster[s])
+}
+
+
+```
+
+
+Eleventh test: some wacky clustering stuff - TAN
+```{r}
+
+TAN_clust = data.frame(cbind(c(TAB$sit_TAN,VR.cut$sit_TAN),c(TAB$stand_TAN,VR.cut$stand_TAN),c(TAB$supine_TAN,VR.cut$supine_TAN),c(TAB$X45_TAN,VR.cut$X45_TAN)))
+TAN_clust = data.frame(cbind(modTAN.all,TAN_clust))
+colnames(TAN_clust) = c("modality","sit","stand","supine","45deg")
+
+library(mclust);
+#rownames(VAN_clust) = VAN_clust[,1];
+mc_tan = Mclust(TAN_clust);
+mc_tan$classification;
+mc_tan$G;
+km  = kmeans(TAN_clust[,2:5], centers = 1);
+km$cluster; # what does this mean @?@?@????!?!
+
+#plot(TAN_clust)
+i = 2;j = 3; # sit v stand
+plot(TAN_clust[,i], TAN_clust[,j], xlab='sitTAN', ylab='standTAN',main="Sit vs Stand TAN" ,type="n")
+for(s in 1:nrow(TAN_clust)) {
+  text(TAN_clust[s,i], TAN_clust[s,j], TAN_clust[s,1], col=km$cluster[s])
+}
+
+i = 2;j = 4;
+plot(TAN_clust[,i], TAN_clust[,j], xlab='sitTAN', ylab='supineTAN',main="Sit vs Supine TAN" ,type="n")
+for(s in 1:nrow(TAN_clust)) {
+  text(TAN_clust[s,i], TAN_clust[s,j], TAN_clust[s,1], col=km$cluster[s])
+}
+
+i = 2;j = 5; 
+plot(TAN_clust[,i], TAN_clust[,j], xlab='sitTAN', ylab='45degTAN',main="Sit vs 45deg HT TAN" ,type="n")
+for(s in 1:nrow(TAN_clust)) {
+  text(TAN_clust[s,i], TAN_clust[s,j], TAN_clust[s,1], col=km$cluster[s])
+}
+
+i = 3;j = 4; 
+plot(TAN_clust[,i], TAN_clust[,j], xlab='standTAN', ylab='supineTAN',main="Stand vs Supine TAN" ,type="n")
+for(s in 1:nrow(TAN_clust)) {
+  text(TAN_clust[s,i], TAN_clust[s,j], TAN_clust[s,1], col=km$cluster[s])
+}
+
+i = 3;j = 5; 
+plot(TAN_clust[,i], TAN_clust[,j], xlab='standTAN', ylab='45degTAN',main="Stand vs 45deg HT TAN" ,type="n")
+for(s in 1:nrow(TAN_clust)) {
+  text(TAN_clust[s,i], TAN_clust[s,j], TAN_clust[s,1], col=km$cluster[s])
+}
+
+i = 4;j = 5; 
+plot(TAN_clust[,i], TAN_clust[,j], xlab='supineTAN', ylab='45degTAN',main="Supine vs 45deg HT TAN" ,type="n")
+for(s in 1:nrow(TAN_clust)) {
+  text(TAN_clust[s,i], TAN_clust[s,j], TAN_clust[s,1], col=km$cluster[s])
+}
+
+```
+
