@@ -5,8 +5,11 @@ import os
 
 # change these variables as needed
 number_of_folders = 4 # number of folders with VANTAN pre or post data txt files
-directory = "/Users/victoryang/Documents/Hopkins/Research/Spaceflight/VANTAN/" # place where you keep VANTAN files
-folders = ["21.07.30 preflight1","21.08.23 preflight2","21.09.18 postflight1","21.09.19 postflight2"]
+#directory = "/Users/victoryang/Documents/Hopkins/Research/Spaceflight/VANTAN/" # place where you keep VANTAN files
+#folders = ["21.07.30 preflight1","21.08.23 preflight2","21.09.18 postflight1","21.09.19 postflight2"]
+
+directory = "/Users/Yogaa/Documents/HSL/" # place where you keep VANTAN files
+folders = ["Arjun-data","Ashley-data","Brendan-data","Mallika-data", "Serena-data"]
 
 # iterate through all the VANTAN folders
 for folder in range(number_of_folders):
