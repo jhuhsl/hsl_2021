@@ -6,8 +6,8 @@ import statistics
 #directory = "/Users/victoryang/Documents/Hopkins/Research/Spaceflight/VANTAN/csv_files/" # place where you keep VANTAN csv files
 #output_directory = "/Users/victoryang/Documents/Hopkins/Research/Spaceflight/VANTAN/"
 
-directory = "/Users/Yogaa/Documents/HSL/csv_files/"
-output_directory = "/Users/Yogaa/Documents/HSL/"
+directory = "/Users/Yogaa/Documents/HSL 2/csv_files/"
+output_directory = "/Users/Yogaa/Documents/HSL 2/"
 
 # VAN results will be averaged across all trials in a test session and stored here
 VAN_results = dict()
